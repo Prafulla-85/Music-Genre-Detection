@@ -1,0 +1,6 @@
+Django
+djangorestframework
+numpy
+librosa
+tensorflow
+  

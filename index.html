@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Genre Detection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="div navbar">
+        <img src="logo.png" alt="" class="logo" />
+        <ul>
+          <li>Prafulla</li>
+          <li>Hrishubh</li>
+          <li>Deep</li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="left-col">
+          <h1>
+            THE<br />REAL<br />
+            GENRE
+          </h1>
+        </div>
+        <div class="right-col">
+            <h2 class="space">Choose File To Upload</h2>
+            <input type="file" id="upload" title="Upload File" class="space" />
+            <img src="play.png" alt="" id="icon" class="space" />
+            <h2>Genre Detection</h2>
+            <table>
+              <tr>
+                <th>Genre</th>
+                <th>Percentage</th>
+              </tr>
+              <tr>
+                <td>Bass</td>
+                <td>78%</td>
+              </tr>
+              <tr>
+                <td>Jazz</td>
+                <td>22%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="mySong">
+      <source src="audio.mp3" type="audio/mp3" />
+    </audio>
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon");
+
+      icon.onclick = function () {
+        if (mySong.paused) {
+          mySong.play();
+          icon.src = "pause.png";
+        } else {
+          mySong.pause();
+          icon.src = "play.png";
+        }
+      };
+    </script>
+  </body>
+</html>
